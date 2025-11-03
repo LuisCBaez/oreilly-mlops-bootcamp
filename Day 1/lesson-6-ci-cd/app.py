@@ -8,6 +8,7 @@ import joblib
 
 app = Flask(__name__)
 
+print("Hello World")
 # Load model and preprocessor from local files for CI/CD reliability
 try:
     model = joblib.load("model/rf_model.pkl")
