@@ -1,4 +1,8 @@
+
+
 # 🚀 MLOps Bootcamp: From Foundation to Production
+
+
 
 A comprehensive, hands-on MLOps bootcamp that takes you from basic concepts to production-ready machine learning deployments. This repository contains **10+ practical lessons** covering the entire MLOps lifecycle using real-world tools and datasets.
 
@@ -82,20 +86,29 @@ oreilly-mlops-bootcamp/
 git clone https://github.com/AmmarMohanna/oreilly-mlops-bootcamp.git
 cd oreilly-mlops-bootcamp
 
-# Create conda environment with Python 3.11
-conda create -n mlops-py311 python=3.11
-conda activate mlops-py311
+# Install uv (if not already installed)
+# Windows: powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+# macOS/Linux: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Create virtual environment with Python 3.11
+uv venv --python 3.11
+
+# Activate the environment
+# Windows: .venv\Scripts\activate
+# macOS/Linux: source .venv/bin/activate
 
 # Verify Python version
 python --version  # Should show Python 3.11.x
+
+
 ```
 
 ### 2. **Install Dependencies**
 
 ```bash
-# For each lesson, install requirements
+# For each lesson, install requirements using uv
 cd Day\ 1/lesson-2-git/
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 
 # Repeat for other lessons as needed
 ```
@@ -166,9 +179,9 @@ Day 2: Production
 #### **MLflow Compatibility**
 ```bash
 # Error: AttributeError: 'EntryPoints' object has no attribute 'get'
-# Solution: Use Python 3.11
-conda create -n mlops-py311 python=3.11
-conda activate mlops-py311
+# Solution: Use Python 3.11 with uv
+uv venv --python 3.11
+# Activate: .venv\Scripts\activate (Windows) or source .venv/bin/activate (macOS/Linux)
 ```
 
 #### **Port Conflicts**
@@ -269,3 +282,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Ready to start your MLOps journey?** 🚀
 
 Begin with [Day 1: MLOps Foundation](Day%201/README.md) and work your way through to [Day 2: Applied MLOps](Day%202/README.md) for a complete production-ready MLOps experience! 
+
+
+
+## About This Repository
+This repository contains my work from the O'Reilly MLOps Bootcamp.
+
+I'll be working until complete all lessons and made the following enhancements and modifications:
+- Migrated from conda to uv for faster dependency management
+
+Original course: [link to O'Reilly course if available](https://learning.oreilly.com/live-events/mlopsllmops-bootcamp/0642572182861/)
+
+1. What you learned from the bootcamp
+2. Any challenges you faced and how you solved them
+3. Your own modifications or improvements (like migrating to uv!)
